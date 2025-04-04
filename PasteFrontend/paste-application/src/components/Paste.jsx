@@ -1,7 +1,7 @@
-import React, { use, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './Paste.css';
-import { removeFromPaste } from '../features/pasteSlice';
+import { setGlobalPastes, removeFromPaste } from '../features/pasteSlice';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { default as axios } from 'axios';
@@ -20,6 +20,7 @@ const Paste = () => {
       const res = await axios.get(api);
       console.log(res.data);
       setPasteData(res.data);
+      dispatch(setGlobalPastes(res.data));
 
     }
     catch(error){
@@ -30,7 +31,7 @@ const Paste = () => {
   useEffect(() => {
     getPastesData();
   }, [])
-  
+
   const filterData = pasteData.filter((paste) =>
     paste.title.toLowerCase().includes(searchTerm.toLowerCase())
   );

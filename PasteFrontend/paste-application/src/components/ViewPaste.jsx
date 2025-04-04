@@ -6,38 +6,20 @@ import {default as axios} from 'axios';
 import { useSelector } from 'react-redux';
 
 const ViewPaste = () => {
-  const [paste, setPaste] = useState([]);
+  const [paste, setPaste] = useState(null);
   const { pasteId } = useParams(); 
   console.log(pasteId);
 
-  // const pastes = useSelector((state) => state.paste.pastes);
+  const pastes = useSelector((state) => state.paste.pastes);
   
-  // useEffect(() => {
-  //   const pasteData = pastes.find((p) => pasteId === p.id);
-  //   console.log("Redux Pastes:", pastes);
-  //   console.log("Paste ID from URL:", pasteId);
-  //   setPaste(pasteData);
-  // }, [pasteId, pastes])
-  
-
-  const api = `http://localhost:8080/pasteApi/id/${pasteId}`;
-
-  const getPasteData = async () => {
-    try{
-      const res = await axios.get(api);
-      console.log(res.data);
-      setPaste(res.data);
-    }
-    catch(error){
-      console.log(error);
-    }
-  }
-
   useEffect(() => {
-    getPasteData();
-  }, [pasteId])
+    const pasteData = pastes.find((p) => p.id == pasteId); // works even if types differ
+    console.log("Redux Pastes:", pastes);
+    console.log("Paste ID from URL:", pasteId);
+    setPaste(pasteData);
+  }, [pasteId, pastes])
   
-
+  
   if (!paste) {
     return <h2 className="error">Paste not found</h2>;
   }

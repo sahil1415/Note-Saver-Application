@@ -37,11 +37,11 @@ const HomePage = () => {
     try{
       if(pasteId){
         await axios.put(`${api}/id/${pasteId}`, paste);
-        dispatch(updateToPastes);
+        dispatch(updateToPastes(paste));
       }
       else{
         await axios.post(api, paste);
-        dispatch(addToPastes);
+        dispatch(addToPastes(paste));
       }
       setTitle('');
       setValue('');
