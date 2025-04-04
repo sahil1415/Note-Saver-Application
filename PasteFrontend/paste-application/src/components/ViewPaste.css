@@ -1,0 +1,70 @@
+.view-page {
+    width: 60%;
+    max-width: 800px;
+    min-width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title-area input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #e9e9e9;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  .text-area textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #e9e9e9;
+    resize: none;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  .error {
+    text-align: center;
+    color: red;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Ensuring the button aligns to the right */
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .view-copy {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .view-copy:hover {
+    background-color: #0056b3;
+  }
+  
+  .view-copy:active {
+    background-color: #003f7f;
+  }
+  

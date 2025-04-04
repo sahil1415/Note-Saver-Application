@@ -1,0 +1,58 @@
+
+.home-page {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+    max-width: 1200px;
+    /* height: 100vh; */
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background: #f9f9f9;
+  }
+  
+  .title-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .title-area input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .title-area button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .title-area button:hover {
+    background-color: #0056b3;
+  }
+  
+  .text-area textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+  }
+  
+  .text-area textarea::placeholder {
+    color: #888;
+  }
+  

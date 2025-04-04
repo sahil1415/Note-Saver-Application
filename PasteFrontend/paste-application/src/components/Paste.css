@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.paste-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.search-bar:focus {
+    border-color: #6c757d;
+    box-shadow: 0 0 5px rgba(108, 117, 125, 0.3);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.paste-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    gap: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.paste-card:hover {
+    transform: translateY(-3px);
+}
+
+.paste-title {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.paste-id {
+    font-size: 13px;
+    color: gray;
+    margin-bottom: 5px;
+}
+
+.paste-date {
+    font-size: 12px;
+    color: #666;
+    margin-top: 8px;
+}
+
+.button-grp {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.button-grp button {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Minimalistic Button Styles */
+.edit { border-color: #adb5bd; }
+.view { border-color: #6c757d; }
+.delete { border-color: #d9534f; color: #d9534f; }
+.copy { border-color: #f0ad4e; color: #f0ad4e; }
+.share { border-color: #5cb85c; color: #5cb85c; }
+
+/* Hover Effects */
+.edit:hover { background: #e9ecef; }
+.view:hover { background: #dee2e6; }
+.delete:hover { background: #f8d7da; }
+.copy:hover { background: #fcf8e3; }
+.share:hover { background: #d4edda; }
+
+/* Button Press Effect */
+.button-grp button:active {
+    transform: scale(0.96);
+}
+
+/* No Results Message */
+.no-results {
+    font-size: 17px;
+    color: #777;
+    text-align: center;
+    margin-top: 20px;
+}
